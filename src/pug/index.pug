@@ -1,0 +1,39 @@
+extends template
+
+prepend page
+	- var layout = 'home';
+	- var currentPage = 'home';
+
+block content
+	.page(class="page--" + currentPage)
+		.screens
+			each screen, index in screens
+				.screen(class="screen--" + index)
+					.slide.slide--main
+						.screen__img: img.anim-img(src=screen.img)
+						if screen.title
+							.l-container
+								.screen__title.anim-title !{screen.title}
+		.bgs
+			.anim-bg.lr
+			.anim-bg.ll
+			.anim-bg.br
+			.anim-bg.bl
+		.screens
+			each screen, index in screens
+				.screen(class="screen--" + index)
+					each item, i in screen.slides
+						.slide(class="slide--" + i)
+							if item.text
+								.slide__text.anim-text
+									//- .slide__bg.anim-bg
+									.slide__content
+										if item.title
+											.title !{item.title}
+										.text !{item.text}
+							.slide__product.l-hidden
+								.slide__bg
+								.slide__content.product
+									.product__img: img(src=item.product.img)
+									.product__name !{item.product.name}
+									.product__price !{item.product.price}

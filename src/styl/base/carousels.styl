@@ -1,0 +1,80 @@
+.carousel {
+  &--default {
+    .owl-nav {
+      absolute(50%, 0px);
+      flexy(space-between, center);
+      width: 100%;
+      @media $mobile {
+        justify-content: flex-end;
+        top: 340px;
+      }
+    }
+    .owl-prev,
+    .owl-next {
+      size(50px, 60px);
+      padding: 0 10px;
+      margin: -30px 0;
+      cursor: pointer;
+      .icon {
+        display: block;
+        size(100%);
+        line-height: 1;
+      }
+      &.disabled {
+        //opacity: 0.3;
+      }
+      @media $desktop {
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    .owl-prev {
+      @media $mobile {
+        display: none;
+      }
+    }
+    .owl-dots,
+    & ~ .owl-dots {
+      absolute();
+      bottom: 100%;
+      right: 120px;
+      flexy(flex-end, flex-end);
+      z-index: 2;
+      @media $mobile {
+        top: 0;
+        bottom: auto;
+        right: 0;
+        
+        &--bottom {
+          top: 100%;
+          bottom: auto;
+          right: 50%;
+          transform: translateX(50%);
+        }
+      }
+      .owl-dot {
+        size(80px, 30px);
+        margin-left: 1px;
+        background: transparent;
+        transition: all 0.3s;
+        font: bold 16px/1 $font-base;
+        color: $white;
+        padding: 7px;
+        text-align: center;
+        @media $mobile {
+          height: 50px;
+          padding: 17px 7px;
+        }
+        
+        &:hover,
+        &.active {
+          height: 50px;
+          background: currentColor;
+          color: $white;
+          padding: 17px 7px;
+        }
+      }
+    }
+  }
+}

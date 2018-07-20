@@ -1,0 +1,167 @@
+.screens {
+	height: 100vh;
+}
+.screen {
+	size(100%, 100vh);
+	padding: 40px;
+	absolute(0px, 0px);
+
+	&--0 {
+		z-index: 8;
+	}
+
+	&--1 {
+		z-index: 7;
+	}
+
+	&--2 {
+		z-index: 6;
+	}
+
+	&--3 {
+		z-index: 5;
+	}
+
+	&--4 {
+		z-index: 4;
+	}
+
+	&--5 {
+		z-index: 3;
+	}
+
+	&__img {
+		absolute(0px, 0px);
+		size(100%);
+
+		img {
+			display: block;
+			//fixed-center();
+			absolute-center();
+			object-fit: cover;
+			min-size(100%);
+		}
+	}
+
+	&__title {
+		font: bold vh(50) / 1.3 $font-accent;
+	}
+}
+
+.slide {
+	size(calc(100% - 80px));
+	overflow: hidden;
+	absolute(40px, 40px);
+
+	&--main {
+		relative(0px, 0px);
+		size(100%);
+		flexy(center, center);
+	}
+
+	&__text,
+	&__product {
+		absolute(0px);
+		size(360px, 100%);
+		padding: 2.5rem;
+		flexy(flex-start, center);
+
+		.screen--0 .slide--0 &,
+		.screen--1 .slide--0 &,
+		.screen--2 .slide--0 &,
+		.screen--3 .slide--0 &,
+		.screen--4 .slide--0 &,
+		.screen--5 .slide--1 & {
+			left: 0;
+		}
+
+		.screen--1 .slide--1 &,
+		.screen--3 .slide--1 &,
+		.screen--5 .slide--0 & {
+			right: 0;
+		}
+	}
+	&__bg {
+		absolute(0px, 0px);
+		size(100%);
+
+		.screen--0 .slide--0 &,
+		.screen--1 .slide--0 &,
+		.screen--2 .slide--0 &,
+		.screen--3 .slide--1 &,
+		.screen--5 .slide--1 & {
+			background: rgba(#ffffff, 0.8);
+		}
+
+		.screen--1 .slide--1 &,
+		.screen--3 .slide--0 &,
+		.screen--4 .slide--0 &,
+		.screen--5 .slide--0 & {
+			background: rgba(#000000, 0.8);
+		}
+	}
+
+	&__content {
+		.screen--0 .slide--0 &,
+		.screen--1 .slide--0 &,
+		.screen--2 .slide--0 &,
+		.screen--3 .slide--1 &,
+		.screen--5 .slide--1 & {
+			color: black;
+		}
+
+		.screen--1 .slide--1 &,
+		.screen--3 .slide--0 &,
+		.screen--4 .slide--0 &,
+		.screen--5 .slide--0 & {
+			color: white;
+		}
+		
+	}
+	.title {
+		font: bold 30px/1.4 $font-accent;
+		margin-bottom: 0.5em;
+	}
+	.text {
+		font: 22px/1.5 $font-base;
+	}
+}
+
+.anim-text {
+	transform: translateY(130%);
+}
+.bgs {
+	absolute(0px, 0px);
+	size(100%);
+}
+.screens ~ .screens {
+	absolute(0px, 0px);
+	size(100%);
+	z-index: 10;
+}
+.anim-bg {
+	opacity: 0;
+	fixed(40px, 0, 40px);
+	size(360px, auto);
+	z-index: 9;
+
+	&.ll {
+		left: 40px;
+		background: rgba(#ffffff, 0.8);
+	}
+
+	&.lr {
+		right: 40px;
+		background: rgba(#ffffff, 0.8);
+	}
+
+	&.bl {
+		left: 40px;
+		background: rgba(#000000, 0.8);
+	}
+
+	&.br {
+		right: 40px;
+		background: rgba(#000000, 0.8);
+	}
+}

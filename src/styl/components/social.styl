@@ -1,0 +1,107 @@
+.social {
+
+	flexy(center, center, row, nowrap);
+	color: $dark;
+	
+	&--inline {
+		flex-wrap: nowrap;
+	}
+	
+	&__link {
+		display: block;
+		font-size: 2.5rem;
+		line-height: 1;
+		color: black;
+		transition: color 0.2s;
+		margin-left: 2.5rem;
+		
+		{hover-focus-active} {
+			color: black;
+			text-decoration: none;
+		}
+	}
+	
+	&__text {
+		display: none;
+	}
+	
+	&__text,
+	&__icon {
+		vertical-align: middle;
+	}
+	&__icon {
+		padding: 0.325rem;
+	}
+	
+	&__title {
+		width: 100%;
+		font: bold 40px/1 $font-util;
+		text-align: left;
+		margin: 0;
+		text-transform: uppercase;
+	}
+	&--inline &__title {
+		width: auto;
+		text-align: left;
+		margin-right: 1.25rem;
+	}
+	
+	&__delimiter {
+		display: none;
+	}
+	
+}
+.ya-share2 {
+
+	&__list {
+		padding: 0;
+		margin: 0;
+		flexy(flex-start, center, row, nowrap);
+	}
+	
+	&__item {
+		display: block;
+		margin: 0 1.25rem;
+	}
+	&__link {
+		display: block;
+		circle(4rem, 50%);
+		flex: 0 0 5rem;
+		font-size: 2.5rem;
+		line-height: 1;
+		color: white;
+		background: white;
+		border: 2px solid black;
+		padding: 5px;
+		transition: color 0.2s;
+		
+		{hover-focus-active} {
+			color: white;
+			text-decoration: none;
+		}
+	}
+	
+	&__title {
+		display: none;
+	}
+	
+	&__title,
+	&__badge {
+		vertical-align: middle;
+	}
+	&__badge {
+		background: black;
+		border-radius: 50%;
+	}
+	&__badge,
+	&__icon,
+	.icon {
+		display: block;
+		size(100%);
+		box-sizing: border-box;
+	}
+	&__icon {
+		padding: 0.75rem;
+	}
+	
+}

@@ -1,0 +1,35 @@
+.header {
+	absolute(0px, 0px);
+	width: 100%;
+	z-index: 9;
+	background: transparent;
+	color: $black;
+	padding: 60px 60px 0;
+	
+	&__text {
+		font: bold 18px/1 $font-base;
+		text-transform: uppercase;
+		absolute(0, 20px);
+		top: calc(100vh - 140px);
+	}
+	
+	&__logo {
+		&--elle {
+			absolute(60px, 60px);
+			
+			.icon {
+				size(70px, 35px);
+			}
+		}
+		
+		&--cavalli {
+			width: 160px;
+			margin: 0 auto;
+
+			.img {
+				display: block;
+			}
+		}
+	}
+	
+}

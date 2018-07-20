@@ -1,0 +1,75 @@
+.a {
+  &-fade {
+    .is-animating & {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .is-animating .animate > & {
+      opacity: 1;
+    }
+  }
+  
+  &-fade-slide {
+    &.z-1 {
+      z-index: 1;
+    }
+    .is-animating & {
+      opacity: 0;
+      transform: translateY(2rem);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    
+    .is-animating .animate > & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  &-scale {
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+    
+    .animate > & {
+      transform: scale(1);
+    }
+  }
+  
+  &-expand {
+    .expander {
+      width: 80px;
+      transition: width 0.7s;
+    }
+    .content {
+      opacity: 0;
+      transition: opacity 0.3s 0.7s;
+    }
+    
+    
+    .animate > & {
+      .expander {
+        width: 100%;
+      }
+      .content {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .is-animating &-ordered {
+    for $i in (1...10) {
+      &:nth-child({$i}) {
+        transition-delay: 0.3s * $i;
+      }
+    }
+  }
+  
+  .is-animating &-delay {
+    for $i in (1...6) {
+      &-{$i} {
+        transition-delay: 0.3s * $i;
+      }
+    }
+  }
+}
