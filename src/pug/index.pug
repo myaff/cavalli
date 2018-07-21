@@ -14,6 +14,10 @@ block content
 						if screen.title
 							.l-container
 								.screen__title.anim-title !{screen.title}
+					.screen__indicators
+						.dot.dot--0.active
+						each slide, i in screen.slides
+							.dot(class="dot--" + (i + 1))
 		.bgs
 			.anim-bg.lr
 			.anim-bg.ll
@@ -31,9 +35,11 @@ block content
 										if item.title
 											.title !{item.title}
 										.text !{item.text}
-							.slide__product.l-hidden
+							.slide__product.js-product.js-tp
 								.slide__bg
 								.slide__content.product
 									.product__img: img(src=item.product.img)
 									.product__name !{item.product.name}
-									.product__price !{item.product.price}
+									//- .product__price !{item.product.price}
+									a.product__link(href=text.link, target="_blank") Подробнее
+							.slide__trigger.js-trigger.js-tp +

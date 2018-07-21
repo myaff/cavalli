@@ -1,75 +1,85 @@
-.a {
-  &-fade {
-    .is-animating & {
-      opacity: 0;
-      transition: opacity 0.3s;
+.anim-text {
+	transform: translateY(130%);
+}
+.anim-bg {
+	opacity: 0;
+}
+
+.anim-img {
+  transition: transform 1s ease;
+}
+
+.screen {
+  &--0 .stage-1.anim-img {
+    transform: scale(1.6) translate(-40%, -50%);
+    @media $mDesktop {
+      
     }
-    
-    .is-animating .animate > & {
+    @media $sDesktop {
+      
+    }
+  }
+  &--1 .stage-1.anim-img {
+    transform: scale(2) translate(-3%, 0%);
+  }
+  &--1 .stage-2.anim-img {
+    transform: scale(1.8) translate(-53%, -13%);
+  }
+  &--2 .stage-1.anim-img {
+    transform: scale(1.5) translate(-18%, -17%);
+  }
+  &--3 .stage-1.anim-img {
+    transform: scale(1.9) translate(0%, -16%);
+  }
+  &--3 .stage-2.anim-img {
+    transform: scale(2) translate(-50%, 0%);
+  }
+  &--4 .stage-1.anim-img {
+    transform: scale(1.8) translate(-28%, -8%);
+  }
+  &--5 .stage-1.anim-img {
+    transform: scale(2) translate(0%, -27%);
+  }
+  &--5 .stage-2.anim-img {
+    transform: scale(2.3) translate(-47%, -7%);
+  }
+}
+
+.slide {
+  &__product {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__trigger {
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &.active {
       opacity: 1;
     }
   }
-  
-  &-fade-slide {
-    &.z-1 {
-      z-index: 1;
-    }
-    .is-animating & {
-      opacity: 0;
-      transform: translateY(2rem);
-      transition: transform 0.3s, opacity 0.3s;
-    }
-    
-    .is-animating .animate > & {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+.anim-img.stage-out {
+  transition: none;
+}
+
+.js-trigger {
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.active {
+    opacity: 1;
+    z-index: 10;
   }
-  
-  &-scale {
-    transform: scale(0);
-    transform-origin: center;
-    transition: transform 0.3s;
-    
-    .animate > & {
-      transform: scale(1);
-    }
-  }
-  
-  &-expand {
-    .expander {
-      width: 80px;
-      transition: width 0.7s;
-    }
-    .content {
-      opacity: 0;
-      transition: opacity 0.3s 0.7s;
-    }
-    
-    
-    .animate > & {
-      .expander {
-        width: 100%;
-      }
-      .content {
-        opacity: 1;
-      }
-    }
-  }
-  
-  .is-animating &-ordered {
-    for $i in (1...10) {
-      &:nth-child({$i}) {
-        transition-delay: 0.3s * $i;
-      }
-    }
-  }
-  
-  .is-animating &-delay {
-    for $i in (1...6) {
-      &-{$i} {
-        transition-delay: 0.3s * $i;
-      }
-    }
+}
+.js-product {
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.active.open {
+    opacity: 1;
+    z-index: 10;
   }
 }
