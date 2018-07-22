@@ -163,7 +163,8 @@ function init () {
       {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.ll", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
-    .set(".screen--5 .slide--1 .js-tp", {className: "+=active"});
+    .set(".screen--5 .slide--1 .js-tp", {className: "+=active"})
+    .set(".screen--5 .slide--1 .js-tp", {className: "-=active"}, '+=2');
   
   new ScrollMagic.Scene({
     triggerElement: '.page',
