@@ -3,6 +3,10 @@
  * @module Animation
  */
 
+function clearStyle (el) {
+  $(el).css({"transform": ""});
+}
+
 function init () {
   let controller = new ScrollMagic.Controller();
   let tl = new TimelineMax()
@@ -28,7 +32,7 @@ function init () {
     .to(".screen--0", 2, 
       {y: "-100%", ease: Linear.easeNone})
     .to(".screen--0 .anim-img", 2, 
-      {scale: 1.1, y: "0%", ease: Linear.easeNone}, '-=2')
+      {scale: 1.1, y: "0%", ease: Linear.easeNone, onReverseComplete: clearStyle, onReverseCompleteParams: ['.screen--0 .anim-img']}, '-=2')
     // .screen--1 stage 1
     .set(".screen--1 .anim-img", {className: "+=stage-1"}, "+=1")
     .set(".screen--1 .dot--0", {className: "-=active"})
@@ -61,7 +65,7 @@ function init () {
     .to(".screen--1", 2, 
       {y: "-100%", ease: Linear.easeNone})
     .to(".screen--1 .anim-img", 2, 
-      {y: "70%", ease: Linear.easeNone}, '-=2')
+      {y: "70%", ease: Linear.easeNone, onReverseComplete: clearStyle, onReverseCompleteParams: ['.screen--1 .anim-img']}, '-=2')
     // .screen--2 stage 1
     .set(".screen--2 .anim-img", {className: "+=stage-1"}, "+=1")
     .set(".screen--2 .dot--0", {className: "-=active"})
@@ -80,7 +84,7 @@ function init () {
     .to(".screen--2", 2, 
       {y: "-100%", ease: Linear.easeNone})
     .to(".screen--2 .anim-img", 2, 
-      {scale: 1.1, x: "-50%", y: "-50%", ease: Linear.easeNone}, '-=2')
+      {scale: 1.1, x: "-50%", y: "-50%", ease: Linear.easeNone, onReverseComplete: clearStyle, onReverseCompleteParams: ['.screen--2 .anim-img']}, '-=2')
     // .screen--3 stage 1
     .set(".screen--3 .anim-img", {className: "+=stage-1"}, "+=1")
     .set(".screen--3 .dot--0", {className: "-=active"})
@@ -113,7 +117,7 @@ function init () {
     .to(".screen--3", 2, 
       {y: "-100%", ease: Linear.easeNone})
     .to(".screen--3 .anim-img", 2, 
-      {scale: 2, y: "75%", ease: Linear.easeNone}, '-=2')
+      {scale: 2, y: "75%", ease: Linear.easeNone, onReverseComplete: clearStyle, onReverseCompleteParams: ['.screen--3 .anim-img']}, '-=2')
     // .screen--4 stage 1
     .set(".screen--4 .anim-img", {className: "+=stage-1"}, "+=1")
     .set(".screen--4 .dot--0", {className: "-=active"})
@@ -132,7 +136,7 @@ function init () {
     .to(".screen--4", 2, 
       {y: "-100%", ease: Linear.easeNone})
     .to(".screen--4 .anim-img", 2, 
-      {scale: 1.1, ease: Linear.easeNone}, '-=2')
+      {scale: 1.1, ease: Linear.easeNone, onReverseComplete: clearStyle, onReverseCompleteParams: ['.screen--4 .anim-img']}, '-=2')
     // .screen--5 stage 1
     .set(".screen--5 .anim-img", {className: "+=stage-1"}, "+=1")
     .set(".screen--5 .dot--0", {className: "-=active"})
