@@ -139,12 +139,12 @@ function init () {
     .set(".screen--5 .dot--1", {className: "+=active"})
     .to(".screen--5 .slide--0 .anim-text", 3, 
       {y: "0%", ease: Linear.easeNone}, "+=2")
-    .to(".anim-bg.br", 3, 
-      {opacity: 1, ease: Linear.ease}, '-=2')
-    .to(".screen--5 .slide--0 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
-    .to(".anim-bg.br", 3, 
-      {opacity: 0, ease: Linear.ease}, '-=2')
+    .to(".anim-bg.br", 3.5, 
+      {opacity: 1, ease: Linear.ease}, '-=2.5')
+    .to(".screen--5 .slide--0 .anim-text", 3.5,
+      {y: "-150%", ease: Linear.easeNone})
+    .to(".anim-bg.br", 3.5, 
+      {opacity: 0, ease: Linear.ease}, '-=2.5')
     .set(".screen--5 .slide--0 .js-tp", {className: "+=active"})
     .set(".screen--5 .slide--0 .js-tp", {className: "-=active"}, '+=2')
     // .screen--5 stage 2
@@ -164,7 +164,7 @@ function init () {
   new ScrollMagic.Scene({
     triggerElement: '.page',
     triggerHook: "onLeave",
-    duration: "800%"
+    duration: "900%"
   })
     .setPin(".page")
     .setTween(tl)

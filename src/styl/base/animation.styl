@@ -1,5 +1,9 @@
 .anim-text {
 	transform: translateY(130%);
+
+  .screen--5 .slide--0 & {
+    transform: translateY(150%);
+  }
 }
 .anim-bg {
 	opacity: 0;
@@ -13,35 +17,83 @@
   &--0 .stage-1.anim-img {
     transform: scale(1.6) translate(-40%, -50%);
     @media $mDesktop {
+      transform: scale(1.5) translate(-38%, -50%);
+    }
+    @media $sDesktop {
+      transform: scale(1.46) translate(-38%, -50%);
+    }
+  }
+  &--1 .stage-1.anim-img {
+    transform: scale(2) translate(0%, 0%);
+    @media $mDesktop {
       
     }
     @media $sDesktop {
       
     }
   }
-  &--1 .stage-1.anim-img {
-    transform: scale(2) translate(-2%, 0%);
-  }
   &--1 .stage-2.anim-img {
-    transform: scale(1.8) translate(-53%, -13%);
+    transform: scale(2) translate(-50%, -10%);
+    @media $mDesktop {
+      
+    }
+    @media $sDesktop {
+      
+    }
   }
   &--2 .stage-1.anim-img {
     transform: scale(1.5) translate(-18%, -17%);
+    @media $mDesktop {
+      
+    }
+    @media $sDesktop {
+      
+    }
   }
   &--3 .stage-1.anim-img {
-    transform: scale(1.9) translate(0%, -16%);
+    transform: scale(2) translate(0%, -16%);
+    @media $mDesktop {
+      transform: scale(1.8) translate(-2%, -18%);
+    }
+    @media $sDesktop {
+      
+    }
   }
   &--3 .stage-2.anim-img {
     transform: scale(2) translate(-50%, 0%);
+    @media $mDesktop {
+      
+    }
+    @media $sDesktop {
+      
+    }
   }
   &--4 .stage-1.anim-img {
     transform: scale(1.8) translate(-28%, -8%);
+    @media $mDesktop {
+      transform: scale(1.8) translate(-27%, -8%);
+    }
+    @media $sDesktop {
+      transform: scale(1.7) translate(-25%, -9%);
+    }
   }
   &--5 .stage-1.anim-img {
     transform: scale(2) translate(0%, -27%);
+    @media $mDesktop {
+      
+    }
+    @media $sDesktop {
+      transform: scale(1.8) translate(-3%, -27%);
+    }
   }
   &--5 .stage-2.anim-img {
     transform: scale(2.3) translate(-47%, -7%);
+    @media $mDesktop {
+      transform: scale(2.1) translate(-48%, -9%);
+    }
+    @media $sDesktop {
+      
+    }
   }
 }
 
