@@ -94,11 +94,11 @@ gulp.task('css:build', function () {
 gulp.task('image:minify', function(){
   return gulp.src(path.src.img)
     .pipe(newer(path.build.img))
-    .pipe(imagemin([
+    /*.pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng({optimizationLevel: 5})
-    ]))
+    ]))*/
     .pipe(gulp.dest(path.build.img));
 });
 gulp.task('image:minified', function(){
