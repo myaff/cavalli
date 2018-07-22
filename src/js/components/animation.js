@@ -19,7 +19,7 @@ function init () {
     .to(".anim-bg.ll", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--0 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.ll", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--0 .anim-img", {className: "+=stage-out"})
@@ -38,7 +38,7 @@ function init () {
     .to(".anim-bg.ll", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--1 .slide--0 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.ll", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--1 .slide--0 .js-tp", {className: "+=active"})
@@ -52,7 +52,7 @@ function init () {
     .to(".anim-bg.br", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--1 .slide--1 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.br", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--1 .anim-img", {className: "+=stage-out"})
@@ -71,7 +71,7 @@ function init () {
     .to(".anim-bg.ll", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--2 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.ll", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--2 .anim-img", {className: "+=stage-out"})
@@ -90,7 +90,7 @@ function init () {
     .to(".anim-bg.bl", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--3 .slide--0 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-530%", ease: Linear.easeNone})
     .to(".anim-bg.bl", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--3 .slide--0 .js-tp", {className: "+=active"})
@@ -104,7 +104,7 @@ function init () {
     .to(".anim-bg.lr", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--3 .slide--1 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.lr", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--3 .anim-img", {className: "+=stage-out"})
@@ -123,7 +123,7 @@ function init () {
     .to(".anim-bg.bl", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--4 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.bl", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--4 .anim-img", {className: "+=stage-out"})
@@ -142,7 +142,7 @@ function init () {
     .to(".anim-bg.br", 3.5, 
       {opacity: 1, ease: Linear.ease}, '-=2.5')
     .to(".screen--5 .slide--0 .anim-text", 3.5,
-      {y: "-150%", ease: Linear.easeNone})
+      {y: "-170%", ease: Linear.easeNone})
     .to(".anim-bg.br", 3.5, 
       {opacity: 0, ease: Linear.ease}, '-=2.5')
     .set(".screen--5 .slide--0 .js-tp", {className: "+=active"})
@@ -156,7 +156,7 @@ function init () {
     .to(".anim-bg.ll", 3, 
       {opacity: 1, ease: Linear.ease}, '-=2')
     .to(".screen--5 .slide--1 .anim-text", 3,
-      {y: "-130%", ease: Linear.easeNone})
+      {y: "-150%", ease: Linear.easeNone})
     .to(".anim-bg.ll", 3, 
       {opacity: 0, ease: Linear.ease}, '-=2')
     .set(".screen--5 .slide--1 .js-tp", {className: "+=active"});
@@ -164,7 +164,7 @@ function init () {
   new ScrollMagic.Scene({
     triggerElement: '.page',
     triggerHook: "onLeave",
-    duration: "900%"
+    duration: "2700%"
   })
     .setPin(".page")
     .setTween(tl)
