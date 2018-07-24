@@ -141,6 +141,10 @@
 	],
 	"text": {
 		"soc": "расскажите о нас друзьям",
-		"link": "http://pubads.g.doubleclick.net/gampad/clk?id=4742272530&iu=/81006599/hmiru-elle/count"
+		"link": "http://pubads.g.doubleclick.net/gampad/clk?id=4742272530&iu=/81006599/hmiru-elle/count",
+		"footer": {
+			"note": "материал подготовленн <br/>при поддержке",
+			"title": "Roberto Cavalli"
+		}
 	}
 }
