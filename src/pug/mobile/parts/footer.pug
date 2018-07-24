@@ -1,0 +1,14 @@
+include ../mixins
+.footer
+  .footer__top
+    .l-container
+      .l-flex-top-noBottom
+        each item in footer
+          .l-col-6
+            .pers
+              .pers__title !{item.title}
+              .pers__name !{item.text}
+  .footer__bottom
+    .l-container
+      .footer__content
+         +social(false, true).footer__social

@@ -1,0 +1,30 @@
+extends template
+
+prepend page
+	- var layout = 'home';
+	- var currentPage = 'home';
+
+block content
+	.page(class="page--" + currentPage)
+		.screens
+			each screen, index in screens
+				each item, i in screen.slides
+					.screen(class="screen--" + index)
+						.slide(class="slide--" + i)
+							.slide__img: img(src='../' + item.img)
+							if screen.title
+								.screen__content
+									.l-container
+										.screen__title !{screen.title}
+							if item.text
+								.slide__text
+									.slide__content
+										if item.title
+											.title !{item.title}
+										.text !{item.text}
+							.slide__product
+								.slide__content.product
+									.product__img: img(src='../' + item.product.img)
+									.product__name !{item.product.name}
+									//- .product__price !{item.product.price}
+									a.product__link(href=text.link, target="_blank") Подробнее

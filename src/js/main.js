@@ -8,15 +8,17 @@ $(document).ready(function(){
   
   DeviceDetection.run();
   Helpers.init();
-  Carousel.init();
   Share.init();
-  Animation.init();
   
   $.afterlag(function(){
     $('html').addClass('is-loaded');
   });
   
   $('html').addClass('is-animating');
+  
+  if (!DeviceDetection.isMobileVersion()) {
+    Animation.init();
+  }
   
 });
 

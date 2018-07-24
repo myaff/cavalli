@@ -1,10 +1,20 @@
 .screens {
-	height: 100vh;
+	.layout--desktop & {
+		height: 100vh;
+	}
 }
 .screen {
-	size(100%, 100vh);
-	padding: 40px;
-	absolute(0px, 0px);
+	.layout--desktop & {
+		size(100%, 100vh);
+		padding: 40px;
+		absolute(0px, 0px);
+	}
+
+	&__content {
+		.layout--mobile & {
+			absolute(140px, auto);
+		}
+	}
 
 	&--0 {
 		z-index: 8;
@@ -255,9 +265,14 @@
 }
 
 .slide {
-	size(calc(100% - 80px));
-	overflow: hidden;
-	absolute(40px, 40px);
+	.layout--desktop & {
+		size(calc(100% - 80px));
+		overflow: hidden;
+		absolute(40px, 40px);
+	}
+	.layout--mobile & {
+		padding: 20px;
+	}
 
 	&--main {
 		relative(0px, 0px);
@@ -267,10 +282,15 @@
 
 	&__text,
 	&__product {
-		absolute(0px);
-		size(360px, 100%);
-		padding: 2.5rem;
-		flexy(flex-start, center);
+		.layout--desktop & {
+			absolute(0px);
+			size(360px, 100%);
+			padding: 2.5rem;
+			flexy(flex-start, center);
+		}
+		.layout--mobile & {
+			padding: 20px;
+		}
 
 		.screen--0 .slide--0 &,
 		.screen--1 .slide--0 &,
@@ -337,10 +357,42 @@
 	.title {
 		font: bold 30px/1.4 $font-accent;
 		margin-bottom: 0.5em;
+
+		.layout--mobile & {
+			font-size: 36px;
+		}
 	}
 	.text {
 		font: 22px/1.5 $font-base;
+
+		.layout--mobile & {
+			font-size: 32px;
+		}
 	}
+
+	&__text {
+		.layout--mobile & {
+			padding: 20px;
+			border: 1px solid black;
+			border-top: 0;
+		}
+	}
+
+	&__product {
+		.layout--mobile & {
+			padding: 80px 20px 60px;
+
+			.slide__content {
+				color: black;
+
+				a {
+					background: black;
+					color: white;
+				}
+			}
+		}
+	}
+
 
 	&__trigger {
 		font: 22px/1 $font-base;
@@ -360,6 +412,13 @@
 			absolute(100%, 50%);
 			background: white;
 			transform-origin: top center;
+		}
+	}
+
+	&__img {
+		img {
+			display: block;
+			width: 100%;
 		}
 	}
 }
@@ -396,5 +455,24 @@
 	&.br {
 		right: 40px;
 		background: rgba(#000000, 0.8);
+	}
+}
+
+.layout--mobile .screen {
+	&--1 .slide--1 .slide__text {
+		background: url('../img/mobile/screen-2-bg.jpg') center no-repeat;
+		color: white;
+	}
+	&--3 .slide--0 .slide__text {
+		background: url('../img/mobile/screen-4-bg.jpg') center no-repeat;
+		color: white;
+	}
+	&--4 .slide--0 .slide__text {
+		background: url('../img/mobile/screen-6-bg.jpg') center no-repeat;
+		color: white;
+	}
+	&--5 .slide--0 .slide__text {
+		background: url('../img/mobile/screen-7-bg.jpg') center no-repeat;
+		color: white;
 	}
 }

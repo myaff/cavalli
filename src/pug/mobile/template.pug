@@ -10,28 +10,22 @@ block page
         //- meta(property="og:image", content="")
         //- include parts/favicon
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=640")
         link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic", rel="stylesheet")
-        link(href="build/css/main.css", rel="stylesheet")
+        link(href="../build/css/main.css", rel="stylesheet")
         link(rel="shortcut icon" href="favicon.ico", type="image/x-icon")
-        script(src="build/js/vendor/jquery-3.2.1.min.js")
-        script(src="build/js/vendor/mobile.js")
-        script(src="build/js/vendor/jquery.ba-throttle-debounce.js")
+        script(src="../build/js/vendor/jquery-3.2.1.min.js")
+        script(src="../build/js/vendor/jquery.ba-throttle-debounce.js")
         script(src="https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js")
-        script(src="build/img/svg/sprite.js")
+        script(src="../build/img/svg/sprite.js")
         script(src="https://yastatic.net/share2/share.js")
     body
       .svg-sprite.l-hidden
       script
         | $('.svg-sprite').html(SVG_SPRITE);
-      .layout.layout--desktop(class="layout--" + layout)
+      .layout.layout--mobile(class="layout--" + layout)
         include parts/header
         block content
         include parts/footer
       
-      script(src="build/js/vendor/TweenMax.min.js")
-      script(src="build/js/vendor/ScrollToPlugin.min.js")
-      script(src="build/js/vendor/ScrollMagic.min.js")
-      script(src="build/js/vendor/animation.gsap.min.js")
-      script(src="build/js/vendor/owl.carousel.min.js")
-      script(src="build/js/main.js")
+      script(src="../build/js/main.js")

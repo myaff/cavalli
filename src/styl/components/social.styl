@@ -1,7 +1,6 @@
 .social {
 
-	flexy(center, center, row, nowrap);
-	color: $dark;
+	flexy(center, center, row, wrap);
 	
 	&--inline {
 		flex-wrap: nowrap;
@@ -35,15 +34,17 @@
 	
 	&__title {
 		width: 100%;
+		flex: 0 0 100%;
 		font: bold 40px/1 $font-util;
-		text-align: left;
-		margin: 0;
+		text-align: center;
+		margin: 0 0 1.5rem;
 		text-transform: uppercase;
 	}
 	&--inline &__title {
 		width: auto;
+		flex: 1 1 auto;
 		text-align: left;
-		margin-right: 1.25rem;
+		margin: 0 1.25rem 0 0;
 	}
 	
 	&__delimiter {

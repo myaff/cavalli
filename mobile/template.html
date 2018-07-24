@@ -3,29 +3,30 @@
   <head>
     <title>Cavalli</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=640">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link href="build/css/main.css" rel="stylesheet">
+    <link href="../build/css/main.css" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="build/js/vendor/jquery-3.2.1.min.js"></script>
-    <script src="build/js/vendor/mobile.js"></script>
-    <script src="build/js/vendor/jquery.ba-throttle-debounce.js"></script>
+    <script src="../build/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="../build/js/vendor/jquery.ba-throttle-debounce.js"></script>
     <script src="https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js"></script>
-    <script src="build/img/svg/sprite.js"></script>
+    <script src="../build/img/svg/sprite.js"></script>
     <script src="https://yastatic.net/share2/share.js"></script>
   </head>
   <body>
     <div class="svg-sprite l-hidden"></div>
     <script>$('.svg-sprite').html(SVG_SPRITE);</script>
-    <div class="layout layout--desktop layout--undefined">
+    <div class="layout layout--mobile layout--undefined">
       <div class="header">
-        <div class="header__logo header__logo--elle">
-                <svg class="icon">
-                  <use xlink:href="#elle"></use>
-                </svg>
-        </div>
         <div class="l-container">
-          <div class="header__logo header__logo--cavalli"><a href="http://pubads.g.doubleclick.net/gampad/clk?id=4742272530&amp;iu=/81006599/hmiru-elle/count" target="_blank"><img class="img" src="build/img/logo-cavalli.png" alt="Roberto Cavalli"></a></div>
+          <div class="header__content">
+            <div class="header__logo header__logo--elle">
+                    <svg class="icon">
+                      <use xlink:href="#elle"></use>
+                    </svg>
+            </div>
+            <div class="header__logo header__logo--cavalli"><a href="http://pubads.g.doubleclick.net/gampad/clk?id=4742272530&amp;iu=/81006599/hmiru-elle/count" target="_blank"><img class="img" src="../build/img/logo-cavalli.png" alt="Roberto Cavalli"></a></div>
+          </div>
           <div class="header__text">специальный проект</div>
         </div>
       </div>
@@ -33,25 +34,25 @@
         <div class="footer__top">
           <div class="l-container">
             <div class="l-flex-top-noBottom">
-              <div class="l-col-3">
+              <div class="l-col-6">
                 <div class="pers">
                   <div class="pers__title">photo</div>
                   <div class="pers__name">Эмми Америка</div>
                 </div>
               </div>
-              <div class="l-col-3">
+              <div class="l-col-6">
                 <div class="pers">
                   <div class="pers__title">style</div>
                   <div class="pers__name">Анастасия Клычкова</div>
                 </div>
               </div>
-              <div class="l-col-3">
+              <div class="l-col-6">
                 <div class="pers">
                   <div class="pers__title">mua & hair</div>
                   <div class="pers__name">Ольга Чарандаева</div>
                 </div>
               </div>
-              <div class="l-col-3">
+              <div class="l-col-6">
                 <div class="pers">
                   <div class="pers__title">total look</div>
                   <div class="pers__name">roberto cavalli</div>
@@ -63,7 +64,7 @@
         <div class="footer__bottom">
           <div class="l-container">
             <div class="footer__content">
-                    <div class="social social--inline footer__social">
+                    <div class="social footer__social">
                       <div class="social__title">расскажите о нас друзьям</div>
                       <div id="share"></div>
                     </div>
@@ -72,11 +73,6 @@
         </div>
       </div>
     </div>
-    <script src="build/js/vendor/TweenMax.min.js"></script>
-    <script src="build/js/vendor/ScrollToPlugin.min.js"></script>
-    <script src="build/js/vendor/ScrollMagic.min.js"></script>
-    <script src="build/js/vendor/animation.gsap.min.js"></script>
-    <script src="build/js/vendor/owl.carousel.min.js"></script>
-    <script src="build/js/main.js"></script>
+    <script src="../build/js/main.js"></script>
   </body>
 </html>

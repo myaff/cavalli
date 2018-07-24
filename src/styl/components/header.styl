@@ -4,27 +4,55 @@
 	z-index: 9;
 	background: transparent;
 	color: $black;
-	padding: 60px 60px 0;
+	
+	.layout--desktop & {
+		padding: 60px 60px 0;
+	}
+	.layout--mobile & {
+		padding: 40px 20px 0;
+	}
+
+	&__content {
+		.layout--mobile & {
+			flexy(space-between, center);
+		}
+	}
 	
 	&__text {
 		font: bold 18px/1 $font-base;
 		text-transform: uppercase;
 		absolute(0, 20px);
 		top: calc(100vh - 140px);
+
+		.layout--mobile & {
+			top: 810px;
+		}
 	}
 	
 	&__logo {
 		&--elle {
-			absolute(60px, 60px);
+			.layout--desktop & {
+				absolute(60px, 60px);
 			
-			.icon {
-				size(70px, 35px);
+				.icon {
+					size(70px, 35px);
+				}
+			}
+			.layout--mobile & {
+				.icon {
+					size(120px, 60px);
+				}
 			}
 		}
 		
 		&--cavalli {
-			width: 160px;
-			margin: 0 auto;
+			.layout--desktop & {
+				width: 160px;
+				margin: 0 auto;
+			}
+			.layout--mobile & {
+				width: 185px;
+			}
 
 			.img {
 				display: block;
