@@ -16,7 +16,7 @@ function init () {
     .set(".screen--0 .dot--1", {className: "+=active"})
     .to(".screen--0 .anim-title", 1, 
       {y: "-300%", ease: Linear.easeNone}, '-=1')
-    .to(".header__text", 0.3, 
+    .to(".header__text, .header__icon", 0.3, 
       {opacity: 0, ease: Linear.easeNone}, '-=1')
     .to(".screen--0 .anim-text", 3, 
       {y: "0%", ease: Linear.easeNone}, '+=2')
